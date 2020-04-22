@@ -73,7 +73,6 @@ class CookBookTest < MiniTest::Test
   end
 
   def test_it_can_return_summary
-    skip
     cookbook = CookBook.new
     ingredient1 = Ingredient.new(name: "Cheese", unit: "C", calories: 100)
     ingredient2 = Ingredient.new(name: "Macaroni", unit: "oz", calories: 30)
