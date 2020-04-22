@@ -20,4 +20,10 @@ class Recipe
     end
   end
 
+  def ingredient_names
+    @ingredients_required.keys.map do |ingredient|
+      ingredient.name
+    end
+  end
+
 end
