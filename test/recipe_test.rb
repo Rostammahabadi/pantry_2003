@@ -6,6 +6,7 @@ require 'pry'
 require './lib/pantry'
 require './lib/cook_book'
 
+
 class ReceipeTest < MiniTest::Test
   def test_it_exists
     ingredient1 = Ingredient.new({name: "Cheese", unit: "C", calories: 100})
@@ -62,7 +63,6 @@ class ReceipeTest < MiniTest::Test
     assert_equal 440, recipe1.total_calories
     assert_equal 675, recipe2.total_calories
   end
-
 
 
 end
