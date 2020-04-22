@@ -46,25 +46,25 @@ class CookBook
     # end
     # summary_deatils = {name: "", details: {}, total_calories: ""}
     # binding.pry
-    outer_array = []
-    first_hash = {}
-    details_hash= {}
-    ingredients_array =[]
-    ingredients_hash = {}
-    final_hash = recipe_names.each do |recipe|
-      first_hash[:name] = recipe
-    end
-    inner_hash = {}
-    @recipes.each do |recipe|
-      recipe.ingredients_required.each do |ingredient, amount|
-      inner_hash[:ingredient] = ingredient.name
-      inner_hash[:amount] = (amount.to_s + ingredient.unit)
-      if ingredients_array.include?(innerh_hash[:ingredient])
-        inner_hash[:amount]
-      ingredients_array << inner_hash
-      binding.pry
-    end
-    end
+    # outer_array = []
+    # first_hash = {}
+    # details_hash= {}
+    # ingredients_array =[]
+    # ingredients_hash = {}
+    # final_hash = recipe_names.each do |recipe|
+    #   first_hash[:name] = recipe
+    # end
+    # inner_hash = {}
+    # @recipes.each do |recipe|
+    #   recipe.ingredients_required.each do |ingredient, amount|
+    #   inner_hash[:ingredient] = ingredient.name
+    #   inner_hash[:amount] = (amount.to_s + ingredient.unit)
+    #   if ingredients_array.include?(innerh_hash[:ingredient])
+    #     inner_hash[:amount]
+    #   ingredients_array << inner_hash
+    #   binding.pry
+    # end
+    # end
   end
 
 end
