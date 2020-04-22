@@ -2,6 +2,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'pry'
 require './lib/pantry'
+require './lib/ingredient'
 
 class PantryTest < MiniTest::Test
   def test_it_exists
@@ -17,11 +18,10 @@ class PantryTest < MiniTest::Test
   end
 
   def test_it_can_check_stock_and_restock_ingredient
-    pantry = Pantry.new
-
-    assert_equal 0, pantry.stock_check(ingredient1)
     ingredient1 = Ingredient.new({name: "Cheese", unit: "oz", calories: 50})
-    ingredient2 = Ingredient.new("Macaroni", "oz", 200)
+    pantry = Pantry.new
+    assert_equal 0, pantry.stock_check(ingredient1)
+    ingredient2 = Ingredient.new({name: "Macaroni", unit: "oz", calories: 200})
     pantry.restock(ingredient1, 5)
     pantry.restock(ingredient1, 10)
 
@@ -30,5 +30,5 @@ class PantryTest < MiniTest::Test
     assert_equal 7, pantry.stock_check(ingredient2)
   end
 
-  
+
 end
