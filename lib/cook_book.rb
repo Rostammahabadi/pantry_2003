@@ -8,4 +8,12 @@ class CookBook
     @recipes << recipe
   end
 
+  def ingredients
+    @recipes.map do |recipe|
+      recipe.ingredients_required.map do |ingredient, amount|
+        ingredient.name
+      end
+    end.flatten.uniq
+  end
+
 end
