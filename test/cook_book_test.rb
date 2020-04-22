@@ -4,6 +4,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'pry'
 require './lib/cook_book'
+require './lib/pantry'
 
 class CookBookTest < MiniTest::Test
 
@@ -43,7 +44,7 @@ class CookBookTest < MiniTest::Test
     recipe2.add_ingredient(ingredient4, 1)
     cookbook.add_recipe(recipe1)
     cookbook.add_recipe(recipe2)
-    assert_eqaul ["Cheese", "Macaroni", "Ground Beef", "Bun"], cookbook.ingredients
+    assert_equal ["Cheese", "Macaroni", "Ground Beef", "Bun"], cookbook.ingredients
   end
 
 
